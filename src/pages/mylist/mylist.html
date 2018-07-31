@@ -1,0 +1,77 @@
+<!--
+  Generated template for the MylistPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Library</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div>
+
+    <ion-list>
+
+      <ion-list>
+        <ion-item-sliding *ngFor="let song of songsTList" #slidingItem>
+          <ion-item>
+            <ion-avatar item-left>
+              <img src={{song.portada}} alt="">
+            </ion-avatar>
+            <button ion-button outline style="background: none; border: none; width: 100%;" (click)="seeSong(song)">
+              <ion-title outline ><h2>{{song.titulo}}</h2></ion-title>
+            </button>
+          </ion-item>
+          <ion-item-options>
+            <button ion-button  (click)="disLikeSong(song.titulo)" color="danger"><ion-icon name="trash"></ion-icon></button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+
+    </ion-list>
+
+
+
+  </div>
+
+
+  <ion-footer no-border="">
+    <div class="bottom_bar">
+      <ion-segment class="ng-untouched ng-pristine ng-valid bar-button-light-ios bar-button-light-wp ">
+        <ion-segment-button class="segment-button bar-button-light-ios" tappable="" value="home" (click)="moveHome()">
+          <ion-icon name="home"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+        <ion-segment-button class="segment-button bar-button-light-ios" role="button" tappable="" value="search"
+                            (click)="moveSearch()">
+          <ion-icon name="search"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+        <ion-segment-button class="segment-button segment-activated bar-button-light-ios" role="button" tappable=""
+                            value="profile" (click)="moveProfile()">
+          <ion-icon name="person"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+        <ion-segment-button class="segment-button segment-activated bar-button-light-ios" role="button" tappable=""
+                            value="library"(click)="Move()">
+
+          <ion-icon name="musical-notes"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+      </ion-segment>
+    </div>
+  </ion-footer>
+</ion-content>

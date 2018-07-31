@@ -1,0 +1,18 @@
+page-signup .background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#037bb5, #02111d); }
+page-signup .scroll-content {
+  text-align: center; }
+page-signup ion-card.card {
+  background: rgba(232, 230, 230, 0.1);
+  border-radius: 10px;
+  min-height: 400px; }
+page-signup .item {
+  background: rgba(232, 230, 230, 0); }
+page-signup ion-input {
+  border-bottom: #488aff 1px solid; }
+page-signup .item-md.item-input.input-has-focus .item-inner {
+  box-shadow: none; }
+
+/*# sourceMappingURL=sign-up.css.map */

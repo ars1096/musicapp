@@ -1,0 +1,31 @@
+page-signin {
+
+  .background{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#037bb5,#02111d);
+  }
+
+  .scroll-content{
+    text-align: center;
+  }
+
+  ion-card.card{
+    background: rgba(232,230,230,0.1px);
+    border-radius: 10px;
+    min-height: 400px;
+  }
+
+  .item {
+    background: rgba(232,230,230,0px);
+  }
+
+  ion-input {
+    border-bottom: #488aff 1px solid;
+  }
+
+  .item-md.item-input.input-has-focus .item-inner {
+    box-shadow: none;
+  }
+
+}

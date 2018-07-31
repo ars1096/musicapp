@@ -1,0 +1,33 @@
+page-mylist {
+  button{
+    color: white;
+    background-color: white;
+  }
+
+    span{
+      border-style: none;
+    }
+    .thumb-img {
+      padding: 10px;
+    }
+
+    .bottom_bar {
+      position: fixed;
+      bottom: 2vh;
+      width: 100%;
+      margin-bottom: -17px;
+      background-color: black;
+    }
+    .footer {
+      border-top: none;
+
+    }
+
+    .button.button-light.active, .button.button-light.activated {
+      color: white;
+    }
+
+
+
+  }
+

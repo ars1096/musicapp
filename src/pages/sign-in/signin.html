@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="background" padding>
+
+  <ion-card style="margin-top: 30px">
+
+    <ion-card-header>
+      <img src="./assets/imgs/donete.png" alt="">
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <form #signInForm="ngForm" (submit)="signIn()">
+
+        <ion-list no-lines>
+
+          <ion-item >
+            <ion-label style="color: white" stacked><b>Correo Electrónico</b></ion-label>
+            <ion-input [(ngModel)]="user.email" name="email" type="text" class=".item-md.item-input.input-has-focus" style=" color: white" autocorrect="off" autocapitalize="none" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="color: white" stacked ><b>Contraseña</b></ion-label>
+            <ion-input [(ngModel)]="user.password" name="password" type="password" class=".item-md.item-input.input-has-focus" style="color: white" minlength="6" required></ion-input>
+          </ion-item>
+
+          <button ion-button [disabled]="!signInForm.form.valid" color="blanco" [block] [outline]>Inicia Sesión</button>
+        </ion-list>
+
+      </form>
+
+      <p style="color: white"><b>o</b></p>
+
+      <button ion-button color="blanco" [block] inset (click)="signUp()">Regístrate</button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

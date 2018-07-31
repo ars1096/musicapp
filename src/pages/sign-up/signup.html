@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="background" padding>
+
+  <ion-card style="margin-top: 30px">
+
+    <ion-card-header>
+      <h1 class="h1"><b>MyMusic</b></h1>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <form #signUpForm="ngForm">
+
+        <ion-list no-lines>
+
+          <ion-item >
+            <ion-label style="color: white" stacked><b>Correo Electrónico</b></ion-label>
+            <ion-input [(ngModel)]="user.email" name="email" type="text" class=".item-md.item-input.input-has-focus" style=" color: white" autocorrect="off" autocapitalize="none" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="color: white" stacked ><b>Contraseña</b></ion-label>
+            <ion-input [(ngModel)]="user.password" name="password" type="password" class=".item-md.item-input.input-has-focus" style="color: white" minlength="6" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label style="color: white" stacked ><b>Nombre de usuario:</b></ion-label>
+            <ion-input [(ngModel)]="profile.nombre" name="name" type="text" class=".item-md.item-input.input-has-focus" style="color: white" minlength="4" required></ion-input>
+          </ion-item>
+
+          <button ion-button [disabled]="!signUpForm.form.valid" color="blanco" [block] [outline] (click)="signUp()">Registrarse</button>
+        </ion-list>
+
+      </form>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

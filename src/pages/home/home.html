@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      MyMusicApp
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-slides autoplay="500" loop="true" speed="2500">
+      <ion-slide *ngFor="let image of ImageArray">
+        <img src="{{image.image}}" alt="">
+      </ion-slide>
+
+    </ion-slides>
+  </div>
+
+
+
+
+  <div>
+    <div><h2>Ultimas canciones...</h2></div>
+    <ion-slides class="image-slider" slidesPerView="2">
+      <ion-slide *ngFor=" let img of songs ">
+        <button (click)="seeSong(img)" style="background: none"><img src={{img?.portada}} class="thumb-img"></button>
+
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <div>
+    <div><h2>Viejos éxitos...</h2></div>
+    <ion-slides class="image-slider" slidesPerView="2">
+      <ion-slide *ngFor=" let images of old">
+        <button (click)="seeSong(images)" style="background: none"><img src={{images?.portada}} class="thumb-img"></button>
+
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-footer no-border="">
+    <div class="bottom_bar">
+      <ion-segment class="ng-untouched ng-pristine ng-valid bar-button-light-ios bar-button-light-wp ">
+        <ion-segment-button class="segment-button bar-button-light-ios" tappable="" value="home">
+          <ion-icon name="home"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+        <ion-segment-button class="segment-button bar-button-light-ios" role="button" tappable="" value="search"
+                            (click)="moveSearch()">
+          <ion-icon name="search"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+        <ion-segment-button class="segment-button segment-activated bar-button-light-ios" role="button" tappable=""
+                            value="profile" (click)="moveProfile()">
+          <ion-icon name="person"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+        <ion-segment-button class="segment-button segment-activated bar-button-light-ios" role="button" tappable=""
+                            value="library"(click)="Move()">
+
+          <ion-icon name="musical-notes"></ion-icon>
+          <div class="button-effect"></div>
+        </ion-segment-button>
+
+      </ion-segment>
+    </div>
+  </ion-footer>
+
+</ion-content>
